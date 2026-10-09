@@ -24,7 +24,7 @@ function Stage({ service, compact, className }: { service: Service; compact: boo
         onPointerMove={t.onMove}
         onPointerLeave={t.onLeave}
         style={{ rotateX: t.rotateX, rotateY: t.rotateY }}
-        className="relative size-full overflow-hidden rounded-[22px] border border-line bg-[linear-gradient(180deg,#fbfaff,#f4f3f8)]"
+        className="relative size-full overflow-hidden rounded-[22px] border border-line bg-[linear-gradient(180deg,#fbfaff,#f4f3f8)] dark:bg-[linear-gradient(180deg,#17151f,#121019)]"
       >
         <div aria-hidden className="dot-grid absolute inset-0 opacity-70 [mask-image:radial-gradient(80%_80%_at_50%_45%,#000,transparent)]" />
         <div role="img" aria-label={visualDescriptions[service.id]} className="relative size-full">
@@ -195,7 +195,7 @@ export function Expertise() {
       </div>
       <div className="shell">
         <SectionHeading
-          index="02"
+          index="03"
           kicker="Expertise"
           title="Five disciplines,"
           accent="one connected system."

@@ -143,7 +143,7 @@ export function Crm() {
       <div className="shell">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
-            index="05"
+            index="06"
             kicker="CRM & GoHighLevel"
             title="A CRM that runs"
             accent="the whole pipeline."
@@ -181,7 +181,7 @@ export function Crm() {
               ) : (
                 <div className="relative border-b border-line bg-mist/60 py-3">
                   <div ref={rowRef} className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">{tabList}</div>
-                  <span aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#f6f5f9] to-transparent" />
+                  <span aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#f6f5f9] to-transparent dark:from-[#15131d]" />
                 </div>
               )}
 

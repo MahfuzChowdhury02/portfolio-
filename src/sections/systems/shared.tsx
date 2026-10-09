@@ -38,7 +38,7 @@ export const asIcon = (n: string) => n as IconName;
 export const tints = {
   violet: { tile: "bg-violet-soft text-violet", dot: "bg-violet", text: "text-violet", hex: "#6d3ce6" },
   sky: { tile: "bg-sky-soft text-sky", dot: "bg-sky", text: "text-sky", hex: "#0f6fb8" },
-  fuchsia: { tile: "bg-[#fbe9f7] text-fuchsia", dot: "bg-fuchsia", text: "text-fuchsia", hex: "#b5279e" },
+  fuchsia: { tile: "bg-[#fbe9f7] text-fuchsia dark:bg-[rgb(236_132_220/0.15)]", dot: "bg-fuchsia", text: "text-fuchsia", hex: "#b5279e" },
   teal: { tile: "bg-teal-soft text-teal", dot: "bg-teal", text: "text-teal", hex: "#0b7c74" },
   amber: { tile: "bg-amber-soft text-amber", dot: "bg-amber", text: "text-amber", hex: "#a8550a" },
 } as const;

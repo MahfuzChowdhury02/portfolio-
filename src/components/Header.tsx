@@ -4,10 +4,11 @@ import { nav } from "../content";
 import { ease, scrollToId, useActiveSection } from "../lib/hooks";
 import { Icon, Logo, cx } from "./ui";
 import { Magnetic } from "./motion";
+import { useTheme } from "../lib/theme";
 
 const navIds: readonly string[] = nav.map(n => n.id);
 // observe every section so the indicator clears while reading sections that aren't in the nav
-const ids = ["top", "about", "expertise", "projects", "automation", "crm", "ads", "funnel", "process", "stack", "contact"];
+const ids = ["top", "about", "experience", "expertise", "projects", "automation", "crm", "ads", "funnel", "process", "stack", "contact"];
 
 export function Header() {
   const { scrollY } = useScroll();
@@ -75,6 +76,7 @@ export function Header() {
           </ul>
 
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Magnetic href="#contact" onClick={go("contact")} className="hidden rounded-full bg-ink px-4 py-2.5 text-[13.5px] font-semibold text-white transition-colors hover:bg-violet-deep sm:inline-flex">
               Let's talk <Icon name="arrowUpRight" className="size-3.5" />
             </Magnetic>
@@ -122,6 +124,35 @@ export function Header() {
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+/** Light / dark switch: sun and moon swap with a small rotation. */
+function ThemeToggle() {
+  const [theme, toggle] = useTheme();
+  const dark = theme === "dark";
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-pressed={dark}
+      title={dark ? "Light mode" : "Dark mode"}
+      className="relative grid size-10 place-items-center overflow-hidden rounded-full border border-line-strong bg-white/80 text-ink transition-colors hover:border-violet hover:text-violet"
+    >
+      <AnimatePresence initial={false} mode="wait">
+        <motion.span
+          key={theme}
+          initial={{ y: 14, rotate: -60, opacity: 0 }}
+          animate={{ y: 0, rotate: 0, opacity: 1 }}
+          exit={{ y: -14, rotate: 60, opacity: 0 }}
+          transition={{ duration: 0.35, ease }}
+          className="grid place-items-center"
+        >
+          <Icon name={dark ? "moon" : "sun"} className="size-[18px]" />
+        </motion.span>
+      </AnimatePresence>
+    </button>
   );
 }
 

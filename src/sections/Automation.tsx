@@ -31,7 +31,7 @@ export function Automation() {
     <section id="automation" aria-label="AI and automation" className="section relative isolate overflow-hidden">
       {/* violet-tinted canvas */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#fbfbfd_0%,#f4f0fe_22%,#f3effd_78%,#fbfbfd_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#fbfbfd_0%,#f4f0fe_22%,#f3effd_78%,#fbfbfd_100%)] dark:bg-[linear-gradient(180deg,#0b0a10_0%,#13101f_22%,#120f1d_78%,#0b0a10_100%)]" />
         <div className="absolute left-1/2 top-[30%] h-[720px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(109_60_230/0.12),transparent)]" />
         <div className="absolute -right-40 bottom-10 size-[560px] rounded-full bg-[radial-gradient(closest-side,rgb(15_111_184/0.08),transparent)]" />
       </div>
@@ -40,7 +40,7 @@ export function Automation() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <SectionHeading
-              index="04"
+              index="05"
               kicker="AI & Automation"
               title="Every lead, handled"
               accent="without the busywork."

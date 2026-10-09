@@ -153,7 +153,7 @@ export function Projects() {
       <div className="shell">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
-            index="03"
+            index="04"
             kicker="Selected work"
             title="Projects, built as"
             accent="complete systems."

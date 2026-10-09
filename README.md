@@ -41,6 +41,7 @@ npm run dev        # http://localhost:5173
 | Name, roles, statement, portrait | `person` |
 | Email and social links | `contact` |
 | Navigation | `nav` |
+| Work experience | `experience` |
 | Services (Expertise) | `services` |
 | AI & automation flow steps | `automationFlow` |
 | Funnel stages | `funnelStages` |
@@ -109,6 +110,10 @@ src/
   three/HeroScene.tsx     # hero 3D scene (lazy-loaded)
   three/heroPanels.ts     # canvas-drawn hero panels
 ```
+
+## Light and dark theme
+
+A sun/moon toggle in the navbar switches themes. Light is the default; the choice is saved in `localStorage` (`mc-theme`) and applied before first paint by a small script in `index.html`. Dark mode redefines the colour tokens in `src/index.css` under `.dark`, so components styled with the tokens follow automatically; use Tailwind's `dark:` variant for anything with a hard-coded colour.
 
 ## Accessibility and motion
 

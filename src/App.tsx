@@ -4,6 +4,7 @@ import Lenis from "lenis";
 import { Header, ScrollProgress } from "./components/Header";
 import { Hero } from "./sections/Hero";
 import { About } from "./sections/About";
+import { Experience } from "./sections/Experience";
 import { Expertise } from "./sections/Expertise";
 import { Projects } from "./sections/Projects";
 import { Automation } from "./sections/Automation";
@@ -45,6 +46,7 @@ export default function App() {
       <main id="main">
         <Hero />
         <About />
+        <Experience />
         <Expertise />
         <Projects />
         <Automation />

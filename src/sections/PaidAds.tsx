@@ -61,7 +61,7 @@ export function PaidAds() {
       <div className="shell relative">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-end lg:gap-16">
           <SectionHeading
-            index="06"
+            index="07"
             kicker="Paid ads"
             title="Ads wired to tracking,"
             accent="not guesswork."

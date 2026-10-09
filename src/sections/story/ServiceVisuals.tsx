@@ -76,7 +76,7 @@ function WebVisual({ playing, reduced }: VisualProps) {
                     </Piece>
                   </div>
                   <Piece on={on(4)} className="rounded-xl">
-                    <div className="relative size-full overflow-hidden rounded-xl bg-[linear-gradient(150deg,#efeafd,#e7f2fb)]">
+                    <div className="relative size-full overflow-hidden rounded-xl bg-[linear-gradient(150deg,#efeafd,#e7f2fb)] dark:bg-[linear-gradient(150deg,rgb(164_139_255/0.2),rgb(98_180_243/0.14))]">
                       <span className="absolute -right-6 -top-6 size-28 rounded-full bg-[radial-gradient(circle,rgb(109_60_230/0.45),transparent_70%)]" />
                       <span className="absolute bottom-3 left-3 right-3 rounded-lg bg-white/80 p-2 shadow-sm"><span className="block h-1.5 w-2/3 rounded bg-ink/30" /><span className="mt-1.5 block h-1.5 w-1/3 rounded bg-ink/15" /></span>
                     </div>
@@ -111,7 +111,7 @@ function WebVisual({ playing, reduced }: VisualProps) {
               <span className="h-2.5 w-[60%] rounded bg-[linear-gradient(90deg,#6d3ce6,#b5279e)]" />
               <span className="mt-0.5 h-1 w-[85%] rounded bg-ink/15" />
               <span className="mt-1 grid h-5 w-full place-items-center rounded-full bg-violet text-[7px] font-semibold text-white">Book a call</span>
-              <span className="mt-1 h-16 rounded-lg bg-[linear-gradient(150deg,#efeafd,#e7f2fb)]" />
+              <span className="mt-1 h-16 rounded-lg bg-[linear-gradient(150deg,#efeafd,#e7f2fb)] dark:bg-[linear-gradient(150deg,rgb(164_139_255/0.2),rgb(98_180_243/0.14))]" />
               <span className="h-6 rounded-md border border-line bg-mist/60" />
             </div>
           </motion.div>
@@ -475,7 +475,7 @@ function FunnelVisual({ playing, reduced }: VisualProps) {
                 <g key={l}>
                   <line x1={cx0 + rx(i) + 10} y1={y(i)} x2={labelX - 8} y2={y(i)} stroke={on ? "rgb(109 60 230 / 0.45)" : "rgb(23 21 31 / 0.12)"} strokeDasharray="2 4" />
                   <motion.g initial={false} animate={{ y: current && !reduced ? -6 : 0 }} transition={{ duration: 0.5, ease }}>
-                    <ellipse cx={cx0} cy={y(i)} rx={rx(i)} ry={ry(i)} fill="#ffffff" stroke={on ? "rgb(84 40 196 / 0.55)" : "rgb(23 21 31 / 0.16)"} strokeWidth={1.2} />
+                    <ellipse cx={cx0} cy={y(i)} rx={rx(i)} ry={ry(i)} style={{ fill: "var(--color-white)", stroke: on ? "var(--color-violet)" : "var(--color-line-strong)" }} strokeWidth={1.2} />
                     <motion.ellipse cx={cx0} cy={y(i)} rx={rx(i)} ry={ry(i)} fill="url(#a-funnel-plate)" initial={false} animate={{ opacity: current ? 0.95 : on ? 0.3 : 0 }} transition={{ duration: 0.5, ease }} />
                     <ellipse cx={cx0} cy={y(i) - 1.5} rx={rx(i) * 0.82} ry={ry(i) * 0.6} fill="none" stroke="rgb(255 255 255 / 0.55)" strokeWidth={1} />
                   </motion.g>

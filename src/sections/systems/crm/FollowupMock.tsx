@@ -61,7 +61,7 @@ export function FollowupMock({ active }: { active: boolean }) {
 
       {/* phone preview */}
       <div className="flex flex-col gap-3">
-        <div className="relative hidden flex-1 overflow-hidden rounded-[26px] border-[6px] border-ink bg-[#f6f5fa] p-3 shadow-[0_24px_40px_-24px_rgb(23_21_31/0.6)] md:flex md:flex-col">
+        <div className="relative hidden flex-1 overflow-hidden rounded-[26px] border-[6px] border-ink bg-[#f6f5fa] dark:border-[#2a2738] dark:bg-[#1d1b27] p-3 shadow-[0_24px_40px_-24px_rgb(23_21_31/0.6)] md:flex md:flex-col">
           <span aria-hidden className="mx-auto mb-2 h-1.5 w-14 rounded-full bg-ink/80" />
           <p className="text-center text-[10.5px] font-semibold text-ink-3">Messages</p>
           <div className="mt-2 flex flex-1 flex-col justify-end gap-1.5">

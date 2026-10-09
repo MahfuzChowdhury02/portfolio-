@@ -12,7 +12,7 @@ export function Process() {
       </div>
       <div className="shell">
         <SectionHeading
-          index="08"
+          index="09"
           kicker="Process"
           title="How a system"
           accent="comes together."

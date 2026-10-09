@@ -65,6 +65,16 @@ export const focusAreas = [
   { id: "funnels", label: "Funnel development", line: "Lead, sales and appointment funnels — from landing page to thank-you page." },
 ] as const;
 
+/* ---------------- work experience (confirmed by Mahfuz; add dates/details only when provided) ---------------- */
+
+export type Role = { role: string; company: string; accent: "violet" | "sky" | "teal" };
+
+export const experience: Role[] = [
+  { role: "Creative Director", company: "LofiStack", accent: "violet" },
+  { role: "IT Support", company: "MassMarket", accent: "sky" },
+  { role: "Automation Engineer", company: "Biofocal", accent: "teal" },
+];
+
 /* ---------------- expertise ---------------- */
 
 export type ServiceId = "web" | "crm" | "ads" | "ai" | "funnels";

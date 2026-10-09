@@ -4,6 +4,7 @@ import { funnelStages } from "../content";
 import { Reveal } from "../components/motion";
 import { Icon, IllustrativeTag, SectionHeading, cx } from "../components/ui";
 import { clamp, ease, useMediaQuery } from "../lib/hooks";
+import { useTheme } from "../lib/theme";
 import { StageVisual, stageIcons, type StageId } from "./showcase/funnelVisuals";
 
 const stages = funnelStages;
@@ -19,6 +20,7 @@ const widthAt = (i: number) => 100 - (i * (100 - MIN_W)) / (N - 1);
 
 function FunnelStack({ active, onSelect, playing }: { active: number; onSelect: (i: number) => void; playing: boolean }) {
   const H = (N - 1) * GAP + RING_H * 0.5;
+  const dark = useTheme()[0] === "dark";
   return (
     <div className="relative w-full" style={{ height: H + 40, perspective: 1100, perspectiveOrigin: "50% -20%" }} aria-hidden>
       {/* soft cone behind the plates */}
@@ -71,13 +73,13 @@ function FunnelStack({ active, onSelect, playing }: { active: number; onSelect: 
                 background: on
                   ? "radial-gradient(70% 70% at 50% 35%, #8f63ff 0%, #6d3ce6 45%, #5428c4 100%)"
                   : past
-                    ? "radial-gradient(70% 70% at 50% 35%, #ffffff 0%, #efeafd 70%, #e3d9fb 100%)"
-                    : "radial-gradient(70% 70% at 50% 35%, #ffffff 0%, #f8f7fb 70%, #efeef4 100%)",
+                    ? (dark ? "radial-gradient(70% 70% at 50% 35%, #332a52 0%, #261f40 70%, #1f1935 100%)" : "radial-gradient(70% 70% at 50% 35%, #ffffff 0%, #efeafd 70%, #e3d9fb 100%)")
+                    : (dark ? "radial-gradient(70% 70% at 50% 35%, #2a2738 0%, #201e2b 70%, #1a1824 100%)" : "radial-gradient(70% 70% at 50% 35%, #ffffff 0%, #f8f7fb 70%, #efeef4 100%)"),
                 boxShadow: on
                   ? "0 16px 0 #3f1d9e, 0 40px 60px -10px rgba(109,60,230,0.55), inset 0 0 0 1px rgba(255,255,255,0.35)"
                   : past
-                    ? "0 12px 0 #d6c9f7, 0 24px 40px -18px rgba(48,27,120,0.3), inset 0 0 0 1px rgba(109,60,230,0.18)"
-                    : "0 12px 0 #e4e2ec, 0 24px 40px -18px rgba(48,27,120,0.22), inset 0 0 0 1px rgba(23,21,31,0.08)",
+                    ? (dark ? "0 12px 0 #17122a, 0 24px 40px -18px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(164,139,255,0.22)" : "0 12px 0 #d6c9f7, 0 24px 40px -18px rgba(48,27,120,0.3), inset 0 0 0 1px rgba(109,60,230,0.18)")
+                    : (dark ? "0 12px 0 #0f0e15, 0 24px 40px -18px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.08)" : "0 12px 0 #e4e2ec, 0 24px 40px -18px rgba(48,27,120,0.22), inset 0 0 0 1px rgba(23,21,31,0.08)"),
               }}
               transition={{ duration: 0.6, ease }}
             />
@@ -273,7 +275,7 @@ export function Funnel() {
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[600px] bg-[radial-gradient(60%_60%_at_80%_0%,rgb(181_39_158/0.06),transparent_70%)]" />
       <div className="shell relative">
         <SectionHeading
-          index="07"
+          index="08"
           kicker="Funnels"
           title="From first click"
           accent="to booked call."

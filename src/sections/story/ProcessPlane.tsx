@@ -81,7 +81,7 @@ export function ProcessPlane() {
           style={{ transform: `rotateX(${TILT}deg)`, transformOrigin: "50% 0%" }}
         >
           {/* the plane surface */}
-          <div aria-hidden className="absolute -inset-x-[4%] -inset-y-[6%] rounded-[48px] border border-line bg-[linear-gradient(180deg,rgb(255_255_255/0.9),rgb(244_243_248/0.7))] shadow-[0_60px_120px_-60px_rgb(48_27_120/0.35)]">
+          <div aria-hidden className="absolute -inset-x-[4%] -inset-y-[6%] rounded-[48px] border border-line bg-[linear-gradient(180deg,rgb(255_255_255/0.9),rgb(244_243_248/0.7))] dark:bg-[linear-gradient(180deg,rgb(32_29_45/0.92),rgb(21_19_29/0.75))] shadow-[0_60px_120px_-60px_rgb(48_27_120/0.35)]">
             <div className="dot-grid absolute inset-0 rounded-[inherit] opacity-90 [mask-image:radial-gradient(75%_70%_at_50%_50%,#000,transparent)]" />
           </div>
 

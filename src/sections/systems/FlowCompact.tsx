@@ -16,7 +16,7 @@ export function FlowCompact({ runner }: { runner: FlowRunner }) {
 
   return (
     <div className={cx("grid gap-5", md && "grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-start")}>
-      <div className="relative rounded-[26px] border border-white bg-[linear-gradient(170deg,#ffffff,#f5f1ff)] p-4 shadow-[0_0_0_1px_rgb(109_60_230/0.10),0_40px_80px_-50px_rgb(48_27_120/0.45)] sm:p-5">
+      <div className="relative rounded-[26px] border border-white bg-[linear-gradient(170deg,#ffffff,#f5f1ff)] dark:border-[#fff]/10 dark:bg-[linear-gradient(170deg,#1e1b2b,#16132a)] p-4 shadow-[0_0_0_1px_rgb(109_60_230/0.10),0_40px_80px_-50px_rgb(48_27_120/0.45)] sm:p-5">
         {!md && (
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <FlowControls runner={runner} />
@@ -44,7 +44,7 @@ export function FlowCompact({ runner }: { runner: FlowRunner }) {
                     active ? "border-violet/30 bg-white shadow-[0_0_0_4px_rgb(109_60_230/0.08),0_16px_30px_-20px_rgb(84_40_196/0.5)]" : "border-transparent hover:bg-white/70",
                   )}
                 >
-                  <span className={cx("relative grid size-10 shrink-0 place-items-center rounded-xl ring-4 ring-[#f7f4ff] sm:size-12", t.tile)}>
+                  <span className={cx("relative grid size-10 shrink-0 place-items-center rounded-xl ring-4 ring-[#f7f4ff] dark:ring-[#1a1729] sm:size-12", t.tile)}>
                     <Icon name={asIcon(s.icon)} className="size-[18px] sm:size-5" />
                     {done && (
                       <span className="absolute -right-1 -top-1 grid size-4 place-items-center rounded-full bg-violet text-white ring-2 ring-white">

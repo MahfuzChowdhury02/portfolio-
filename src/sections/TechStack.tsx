@@ -97,7 +97,7 @@ export function TechStack() {
       <div className="shell">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
-            index="09"
+            index="10"
             kicker="Tech stack"
             title="A focused stack,"
             accent="used together."

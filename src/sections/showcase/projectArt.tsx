@@ -11,10 +11,10 @@ import { cx } from "../../components/ui";
 export type Accent = Project["accent"];
 
 export const accentTokens: Record<Accent, { a: string; b: string; soft: string; text: string; ring: string; glow: string }> = {
-  violet: { a: "#6d3ce6", b: "#b5279e", soft: "#efeafd", text: "text-violet", ring: "ring-violet/20", glow: "rgb(109 60 230 / 0.22)" },
-  sky: { a: "#0f6fb8", b: "#6d3ce6", soft: "#e7f2fb", text: "text-sky", ring: "ring-sky/20", glow: "rgb(15 111 184 / 0.2)" },
-  teal: { a: "#0b7c74", b: "#0f6fb8", soft: "#e3f4f1", text: "text-teal", ring: "ring-teal/20", glow: "rgb(11 124 116 / 0.2)" },
-  amber: { a: "#a8550a", b: "#c2334d", soft: "#fbf0e3", text: "text-amber", ring: "ring-amber/20", glow: "rgb(168 85 10 / 0.2)" },
+  violet: { a: "#6d3ce6", b: "#b5279e", soft: "var(--color-violet-soft)", text: "text-violet", ring: "ring-violet/20", glow: "rgb(109 60 230 / 0.22)" },
+  sky: { a: "#0f6fb8", b: "#6d3ce6", soft: "var(--color-sky-soft)", text: "text-sky", ring: "ring-sky/20", glow: "rgb(15 111 184 / 0.2)" },
+  teal: { a: "#0b7c74", b: "#0f6fb8", soft: "var(--color-teal-soft)", text: "text-teal", ring: "ring-teal/20", glow: "rgb(11 124 116 / 0.2)" },
+  amber: { a: "#a8550a", b: "#c2334d", soft: "var(--color-amber-soft)", text: "text-amber", ring: "ring-amber/20", glow: "rgb(168 85 10 / 0.2)" },
 };
 
 export type ArtVariant = "site" | "board" | "funnel" | "ads";
@@ -170,7 +170,7 @@ function AdsArt({ accent }: { accent: Accent }) {
         </svg>
       </div>
       <div className="grid grid-cols-2 gap-3">
-        {[0, 1].map(i => <div key={i} className="flex flex-col gap-2 rounded-xl p-3" style={{ background: i ? "#fff" : t.soft, border: i ? "1px solid rgb(23 21 31 / 0.07)" : undefined }}><Bar w="60%" /><Bar w="85%" /><Bar w="40%" /></div>)}
+        {[0, 1].map(i => <div key={i} className="flex flex-col gap-2 rounded-xl p-3" style={{ background: i ? "var(--color-white)" : t.soft, border: i ? "1px solid var(--color-line)" : undefined }}><Bar w="60%" /><Bar w="85%" /><Bar w="40%" /></div>)}
       </div>
     </div>
   );

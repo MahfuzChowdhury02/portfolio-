@@ -86,7 +86,7 @@ export function FlowStage({ runner, preview, setPreview }: Props) {
         style={{ aspectRatio: `${W} / ${H}`, rotateX, rotateY, rotateZ }}
       >
         {/* the board */}
-        <div aria-hidden className="absolute inset-0 rounded-[28px] border border-white bg-[linear-gradient(160deg,#ffffff_0%,#f7f4ff_55%,#efe9fd_100%)] shadow-[0_1px_0_#fff_inset,0_0_0_1px_rgb(109_60_230/0.10),0_60px_120px_-50px_rgb(48_27_120/0.45)]">
+        <div aria-hidden className="absolute inset-0 rounded-[28px] border border-white bg-[linear-gradient(160deg,#ffffff_0%,#f7f4ff_55%,#efe9fd_100%)] dark:border-[#fff]/10 dark:bg-[linear-gradient(160deg,#1e1b2b_0%,#181528_55%,#140f26_100%)] dark:shadow-[0_0_0_1px_rgb(164_139_255/0.14),0_60px_120px_-50px_rgb(0_0_0/0.85)] shadow-[0_1px_0_#fff_inset,0_0_0_1px_rgb(109_60_230/0.10),0_60px_120px_-50px_rgb(48_27_120/0.45)]">
           <div className="dot-grid absolute inset-0 rounded-[28px] opacity-70 [mask-image:radial-gradient(75%_70%_at_50%_50%,#000,transparent)]" />
           <svg viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 size-full">
             <defs>
